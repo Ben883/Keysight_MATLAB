@@ -14,7 +14,7 @@ This program is designed to be an additional tool for Keysight VXG users and dev
 
 **e)**	Physical connections specified by the official M9384B Measurement Guide.
 
-**f)**	LAN connections to both instruments you wish to control, along with their corresponding VISA addresses.
+**f)**	LAN connections to both instruments you wish to control.
 
 **g)**	The waveform and settings files specified in the Measurement Guide. The measurement guide and other documentation can be found [here](https://www.keysight.com/main/techSupport.jspx?nid=-31849.1261271&pid=2976298&cc=US&lc=eng&pageMode=PL).
 
@@ -34,18 +34,22 @@ In VSA, go to `Utilities` >> `SCPI Preferences`
 
 The socket location must be changes as 5025 will be in use by the analyzer that is communicating with VSA, (5024 or 5026 is safe). Next, select `Configure External SCPI Server`. Enable SCPI on startup will help so that you don't have to go through this process every time. This is also where you want to get the VISA address for you VSA application.
 
-<img width = "700" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/VSA%20SCPI%20Conf.PNG?raw=true">
+<img width = "400" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/VSA%20SCPI%20Conf.PNG?raw=true">
 
 Once these steps have been completed, select the `Connect to VSA` button in the Virtual Measurement Guide and a message will appear saying "Connected to `your device info`"
 
 ### TIP:
 You can change the VSA Visa that is preloaded by editing the .mlapp file and changing the value of app.VSAVisaEditField
 
-<img width = "700" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/ChangingVISA.png?raw=true">
+<img width = "600" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/ChangingVISA.png?raw=true">
 
- 
+## Additional Features
 
-## Your first website
+On the main GUI, there is an `SA Display` switch. This switch allows you to turn the display of your Signal Analyzer on and off. This can drastically increase the speed of reading trace data.
+
+There is also an `Optimize EVM` button which only works if you are in one of the 5G NR measurements. This button will configure the analyzer to optimize EVM and return the new data in tabular form.
+
+Above the measurement choices are two text boxes named `Time to Run` and `Total Time`. `Time to Run` tells you how long that specific measurement took and `Total Time` 
 
 **GitHub Pages** is a free and easy way to create a website using the code that lives in your GitHub repositories. You can use GitHub Pages to build a portfolio of your work, create a personal website, or share a fun project that you coded with the world. GitHub Pages is automatically enabled in this repository, but when you create new repositories in the future, the steps to launch a GitHub Pages website will be slightly different.
 
