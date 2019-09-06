@@ -1,18 +1,38 @@
-# Welcome to GitHub
+# MATLAB Keysight M9383B & M9384B Virtual Measurement Guide
 
-Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
+This program is designed to be an additional tool for Keysight VXG users and developers. This program automates the measurements in the VXG Measurement Guide and has two additional functions to automate EVM and ACP vs. Power.
 
-## Repositories
+## Required Equipment
 
-Right now, we’re in your first GitHub **repository**. A repository is like a folder or storage space for your project. Your project's repository contains all its files such as code, documentation, images, and more. It also tracks every change that you—or your collaborators—make to each file, so you can always go back to previous versions of your project if you make any mistakes.
+**a)**	Keysight X-Series Analyzer with Software version A.24.57 or later. (Note: Some measurements go up to 44 GHz and they will be cut off if your analyzer cannot go that high)
 
-This repository contains three important files: The HTML code for your first website on GitHub, the CSS stylesheet that decorates your website with colors and fonts, and the **README** file. It also contains an image folder, with one image file.
+**b)**	MATLAB 2019b or later installed on PC or X-Series Analyzer.
 
-## Describe your project
+**c)**	VSA version 24.20.134.0 or later (VSA portion only) 
 
-You are currently viewing your project's **README** file. **_README_** files are like cover pages or elevator pitches for your project. They are written in plain text or [Markdown language](https://guides.github.com/features/mastering-markdown/), and usually include a paragraph describing the project, directions on how to use it, who authored it, and more.
+**d)**	A VXG (Single or Dual Channel) Vector Signal Generator.
 
-[Learn more about READMEs](https://help.github.com/en/articles/about-readmes)
+**e)**	Physical connections specified by the official M9384B Measurement Guide.
+
+**f)**	LAN connections to both instruments you wish to control, along with their corresponding VISA addresses.
+
+**g)**	The waveform and settings files specified in the Measurement Guide. The measurement guide and other documentation can be found [here](https://www.keysight.com/main/techSupport.jspx?nid=-31849.1261271&pid=2976298&cc=US&lc=eng&pageMode=PL).
+
+**h)**	Keysight IO Libraries (Keysight Connection Expert)
+
+## Connecting to Your Instruments
+
+When the program first launches, it will pull all of your VISAs from Keysight Connection Expert. Once you select the instruments you want to use, press the `Connect to Instruments` button. 
+
+## Connecting to VSA
+
+For connecting to VSA, you must first open VSA **seperately from X-Apps** (opening VSA in X-Apps disables SCPI communication with VSA)
+
+In VSA, go to `Utilities` >> `SCPI Preferences`
+
+The socket location must be changes as 5025 will be in use by the analyzer that is communicating with VSA, (5024 or 5026 is safe). Next, select `Configure External SCPI Server`.
+
+
 
 ## Your first website
 
