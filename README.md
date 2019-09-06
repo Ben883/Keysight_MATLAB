@@ -22,7 +22,7 @@ This program is designed to be an additional tool for Keysight VXG users and dev
 
 ## Connecting to Your Instruments
 
-When the program first launches, it will pull all of your VISAs from Keysight Connection Expert. Once you select the instruments you want to use, press the `Connect to Instruments` button. 
+When the program first launches, it will pull all of your VISAs from Keysight Connection Expert. Once you select the instruments you want to use, press the `Connect to Instruments` button. Once you are succesfully connected, the light in the bottom right corner of the GUI will turn green.
 
 ## Connecting to VSA
 
@@ -30,7 +30,18 @@ For connecting to VSA, you must first open VSA **seperately from X-Apps** (openi
 
 In VSA, go to `Utilities` >> `SCPI Preferences`
 
-The socket location must be changes as 5025 will be in use by the analyzer that is communicating with VSA, (5024 or 5026 is safe). Next, select `Configure External SCPI Server`.
+<img width="500" alt="rename_screenshot" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/VSA%20User%20Pref.PNG?raw=true">
+
+The socket location must be changes as 5025 will be in use by the analyzer that is communicating with VSA, (5024 or 5026 is safe). Next, select `Configure External SCPI Server`. Enable SCPI on startup will help so that you don't have to go through this process every time. This is also where you want to get the VISA address for you VSA application.
+
+<img width = "700" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/VSA%20SCPI%20Conf.PNG?raw=true">
+
+Once these steps have been completed, select the `Connect to VSA` button in the Virtual Measurement Guide and a message will appear saying "Connected to `your device info`"
+
+### TIP:
+You can change the VSA Visa that is preloaded by editing the .mlapp file and changing the value of app.VSAVisaEditField
+
+<img width = "700" alt="VSA_SCPI_server" src="https://github.com/Ben883/Keysight_MATLAB/blob/master/images/ChangingVISA.png?raw=true">
 
 
 
