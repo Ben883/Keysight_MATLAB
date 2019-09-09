@@ -49,11 +49,11 @@ On the main GUI, there is an `SA Display` switch. This switch allows you to turn
 
 There is also an `Optimize EVM` button which only works if you are in one of the 5G NR measurements. This button will configure the analyzer to optimize EVM and return the new data in tabular form.
 
-Above the measurement choices are two text boxes named `Time to Run` and `Total Time`. `Time to Run` tells you how long that specific measurement took and `Total Time` 
+Above the measurement choices are two text boxes named `Time to Run` and `Total Time`. `Time to Run` tells you how long that specific measurement took and `Total Time` tells you how long that batch of measurements took
 
-**GitHub Pages** is a free and easy way to create a website using the code that lives in your GitHub repositories. You can use GitHub Pages to build a portfolio of your work, create a personal website, or share a fun project that you coded with the world. GitHub Pages is automatically enabled in this repository, but when you create new repositories in the future, the steps to launch a GitHub Pages website will be slightly different.
+**Making Measurements**
 
-[Learn more about GitHub Pages](https://pages.github.com/)
+In order to make any measurement that reads a waveform/setup file (Such as the 5G NR measurements) you will need to ensure that the file paths are correct for your instrument. The preset file locations are the standard files preinstalled on the VXG. If you do not have these waveforms on your instrument, they are also located [here](need to add link). If you need to modify the file directories in the code, right-click the .mlapp file and select edit.
 
 ## Rename this repository to publish your site
 
